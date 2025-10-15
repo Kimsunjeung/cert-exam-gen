@@ -27,10 +27,10 @@ sudo apt install python3 python3-pip python3-venv nodejs npm -y
 
 \`\`\`bash
 # Python 가상환경 생성
-python3 -m venv venv
+python3 -m venv exam-gen
 
 # 가상환경 활성화 (WSL/Linux)
-source venv/bin/activate
+source exam-gen/bin/activate
 
 # 의존성 설치
 cd scripts
