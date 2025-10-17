@@ -13,8 +13,9 @@ import numpy as np
 class QualityEvaluator:
     def __init__(self):
         # RAGAS 평가를 위한 LLM 설정
+        eval_model = os.getenv("EVAL_MODEL", "gpt-4o-mini")
         self.llm = ChatOpenAI(
-            model="gpt-4o-mini",
+            model=eval_model,
             api_key=os.getenv("OPENAI_API_KEY")
         )
         self.embeddings = OpenAIEmbeddings(
